@@ -409,4 +409,5 @@ class ClassifyImageTf(context:Context) {
 
 ![image](https://github.com/jose-jhr/Teachablemachine-arduino-android/assets/66834393/d467e28c-dafe-42c2-9c4c-971939d1ecba)
 ![image](https://github.com/jose-jhr/Teachablemachine-arduino-android/assets/66834393/1a9dc669-a174-437c-a0ad-af089cbaabba)
+![image](https://github.com/jose-jhr/Teachablemachine-arduino-android/assets/66834393/389bf896-8fb9-4e33-a9e1-0e29df227e00)
 
