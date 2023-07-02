@@ -406,6 +406,43 @@ class ClassifyImageTf(context:Context) {
     }
 }
 ```
+```c++
+ int ledYellow = 13;
+ int ledRed = 12;
+ int ledNormal = 11;
+ 
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(ledRed,OUTPUT);
+  pinMode(ledYellow,OUTPUT);
+  pinMode(ledNormal,OUTPUT);
+}
+
+void loop() {
+ 
+  if(Serial.available()>0){
+  char rxDate = Serial.read();
+  Serial.println(rxDate);
+    if(rxDate == 'I'){
+      onLed(true,false,false);
+    }
+    if(rxDate == 'P'){
+      onLed(false,true,false);
+    }
+    if(rxDate == 'N'){
+       onLed(false,false,true);
+    }
+ } 
+}
+
+void onLed(bool ledR,bool ledY,bool ledN){
+  digitalWrite(ledNormal,ledN);
+  digitalWrite(ledYellow,ledY);
+  digitalWrite(ledRed,ledR);
+}
+```
+
 
 ![image](https://github.com/jose-jhr/Teachablemachine-arduino-android/assets/66834393/d467e28c-dafe-42c2-9c4c-971939d1ecba)
 ![image](https://github.com/jose-jhr/Teachablemachine-arduino-android/assets/66834393/1a9dc669-a174-437c-a0ad-af089cbaabba)
